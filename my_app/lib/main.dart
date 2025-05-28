@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp((MaterialApp(
-    home: Scaffold(
+void main() => runApp((MaterialApp(
+    home: Home(),
+  )));
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
-       title: Text("my first app"),
+       title: Text("my firstapp"),
        centerTitle: true,
        backgroundColor: Colors.amber,
       ),
+
       body: Center(
         child: Text(
-          "My first app",
+          "Welcome Jolofi",
           style: TextStyle(
-            backgroundColor: Colors.red,
+            fontFamily: "IndieFlower",
+            fontWeight: FontWeight.bold,
+            color: Colors.pink,
           ),
         ),
       ),
@@ -20,9 +28,9 @@ void main() {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
         },
-        child: Text("click"),
         backgroundColor: Colors.amber,
+        child: Text("click"),
       ),
-    ),
-  )));
+    );
+  }
 }
