@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:picture_app/alignments.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -14,14 +15,19 @@ class MyHomePage extends StatelessWidget {
       ),
 
       body: Center(
-        child: Image(
-          // image: NetworkImage("https://cdn.pixabay.com/photo/2025/02/22/13/12/seeds-9424096_1280.jpg"),
-          image: AssetImage("assets/img.png")
-        ),
-        ),
-
+        child: FloatingActionButton(
+          onPressed: () {
+            print('you clicked me fam');
+          },
+          hoverColor: Colors.amber,
+          child: Icon(
+            Icons.play_arrow,
+            color: Colors.white,
+            size: 20,
+          ),
+        )
       
-      ); 
-       
+      ));
+   
       }
 }
