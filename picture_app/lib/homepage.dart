@@ -14,20 +14,24 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Colors.blue[900],
       ),
 
-      body: Center(
-        child: FloatingActionButton(
-          onPressed: () {
-            print('you clicked me fam');
-          },
-          hoverColor: Colors.amber,
+    body: Row(
+      children: <Widget>[
+        Text('Believe'),
+        FloatingActionButton(
+          onPressed: () {},
+          child: Text('click me'),
+        ),
+        Container(
+          color: Colors.deepOrange,
+          padding: EdgeInsets.all(30),
           child: Icon(
-            Icons.play_arrow,
-            color: Colors.white,
-            size: 20,
-          ),
+            Icons.sports_football, 
+            color: Colors.white,         )
         )
+      ],
+      ),
       
-      ));
+      );
    
       }
 }

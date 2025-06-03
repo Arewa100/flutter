@@ -1,17 +1,3 @@
-buildscript {
-    ext {
-        set("kotlin_version", "1.7.10") // Compatible Kotlin version
-    }
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath("com.android.tools.build:gradle:7.3.0") // Compatible Gradle plugin
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${rootProject.ext["kotlin_version"]}")
-    }
-}
-
 allprojects {
     repositories {
         google()
@@ -25,6 +11,9 @@ rootProject.layout.buildDirectory.value(newBuildDir)
 subprojects {
     val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
     project.layout.buildDirectory.value(newSubprojectBuildDir)
+}
+subprojects {
+    project.evaluationDependsOn(":app")
 }
 
 tasks.register<Delete>("clean") {
