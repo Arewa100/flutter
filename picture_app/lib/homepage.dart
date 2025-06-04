@@ -15,6 +15,7 @@ class MyHomePage extends StatelessWidget {
       ),
 
     body: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Text('Believe'),
         FloatingActionButton(
